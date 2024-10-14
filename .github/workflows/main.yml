@@ -2,10 +2,11 @@ name: CI
 on:
   - push
   - pull_request
+  - workflow_dispatch
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04-ppc64le
     strategy:
       fail-fast: false
       matrix:
